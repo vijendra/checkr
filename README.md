@@ -1,6 +1,6 @@
 # Checkr
 
-TODO: Write a gem description
+Ruby wrapper for checkr.io API (https://checkr.io/docs)
 
 ## Installation
 
@@ -20,7 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+**Configure authentication keys**
+
+  ```Ruby
+  Checkr.configure do |c|
+    c.api_key   = "83ebeabdec09f6670863766f792ead24d61fe3f9" #Test token from checkr api document
+  end
 
 ## Contributing
 

@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://83ebeabdec09f6670863766f792ead24d61fe3f9:@api.checkr.io/v1/candidates
+    body:
+      encoding: UTF-8
+      string: first_name=John&last_name=Smith&dob=1970-01-22&ssn=111-11-2000&phone=5555555555&email=john%40smith.org
+    headers: {}
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 12 Oct 2014 16:07:27 GMT
+      Status:
+      - 201 Created
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '375'
+      X-Content-Type-Options:
+      - nosniff
+      Set-Cookie:
+      - checkr.production=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiRTJhNmZiMTk4MTQ0ZTI0MTc5NWUx%0ANjVmODU3YzU1MWQ3ZWE0NTQ3NjU0YWVjYzliYjVlNTM5ZDU4OGRkODIzOGIG%0AOwBGSSIJY3NyZgY7AEZJIiU4YmViMmY1ZDRlMTczN2IxZWM3ZDYwOGIwYzVk%0ANzIzYgY7AEZJIg10cmFja2luZwY7AEZ7B0kiFEhUVFBfVVNFUl9BR0VOVAY7%0AAFRJIi1kYTM5YTNlZTVlNmI0YjBkMzI1NWJmZWY5NTYwMTg5MGFmZDgwNzA5%0ABjsARkkiGUhUVFBfQUNDRVBUX0xBTkdVQUdFBjsAVEkiLWRhMzlhM2VlNWU2%0AYjRiMGQzMjU1YmZlZjk1NjAxODkwYWZkODA3MDkGOwBG%0A--5550df00fb1edbbe0ebdbd47e524cfd5bbf84aa2;
+        path=/; HttpOnly; secure
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":"48e1768591583c31ada8810f","object":"test_candidate","uri":"/v1/candidates/48e1768591583c31ada8810f","created_at":"2014-10-12T16:07:27Z","first_name":"John","last_name":"Smith","middle_name":null,"dob":"1970-01-22","ssn":"XXX-XX-2000","email":"john@smith.org","zipcode":null,"phone":"5555555555","driver_license_state":null,"driver_license_number":null,"report_ids":[]}'
+    http_version: 
+  recorded_at: Sun, 12 Oct 2014 16:07:27 GMT
+recorded_with: VCR 2.9.3

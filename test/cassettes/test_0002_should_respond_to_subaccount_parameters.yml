@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://83ebeabdec09f6670863766f792ead24d61fe3f9:@api.checkr.io/v1/subaccounts
+    body:
+      encoding: UTF-8
+      string: name=Checkr&entity_name=My%20Company&tax_id=XXXXX&representative_title=CEO&representative_name=John%20Smith&representative_email=john.smith%40company.org&phone=3101111111&incorporation_date=2010-02-02&incorporation_type=llc&incorporation_state=DE&address[street]=3230%203rd%20street&address[city]=San%20Francisco&address[state]=CA&address[zipcode]=94110
+    headers: {}
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 14 Oct 2014 06:43:11 GMT
+      Status:
+      - 201 Created
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '425'
+      X-Content-Type-Options:
+      - nosniff
+      Set-Cookie:
+      - checkr.production=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiRTYyZGNkZWMyM2JmNGNiODExMjdk%0ANmNmNjc1NDQyMWYxOTVjOTM5NWM3Y2QxM2M3MmY2YWFmZDUzMDkyYmI1OGUG%0AOwBGSSIJY3NyZgY7AEZJIiU0MjAyNDE5YjEyMzIyODU0NWU0MjMwZDZjYzVh%0AN2JkZAY7AEZJIg10cmFja2luZwY7AEZ7B0kiFEhUVFBfVVNFUl9BR0VOVAY7%0AAFRJIi1kYTM5YTNlZTVlNmI0YjBkMzI1NWJmZWY5NTYwMTg5MGFmZDgwNzA5%0ABjsARkkiGUhUVFBfQUNDRVBUX0xBTkdVQUdFBjsAVEkiLWRhMzlhM2VlNWU2%0AYjRiMGQzMjU1YmZlZjk1NjAxODkwYWZkODA3MDkGOwBG%0A--5a72a276bfff4c3adb286adc7a794738703439dc;
+        path=/; HttpOnly; secure
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":"d00650cde3fb6c501d60925b","name":"Checkr","authorized":true,"address":{"street":"3230
+        3rd street","city":"San Francisco","zipcode":"94110","state":"CA"},"entity_name":"My
+        Company","tax_id":"XXXXX","incorporation_date":"2010-02-02","incorporation_type":"llc","incorporation_state":"DE","representative_title":"CEO","representative_name":"John
+        Smith","representative_email":"john.smith@company.org","phone":"3101111111"}'
+    http_version: 
+  recorded_at: Tue, 14 Oct 2014 06:43:11 GMT
+recorded_with: VCR 2.9.3
