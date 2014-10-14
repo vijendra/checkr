@@ -42,7 +42,7 @@ Or install it yourself as:
 **Create candidate for subaccount**
 
   ```Ruby
-  candidate = Checkr::Subaccount.create(:first_name => 'John', :last_name => 'Smith', :dob => '1970-01-22', :ssn => '111-11-2000', :phone => '5555555555', :email => 'john@smith.org', :subaccount_id => '8168372aac5a952b90eb9acb')
+  candidate = Checkr::Subaccount.create(:subaccount_id => '8168372aac5a952b90eb9acb', :first_name => 'John', :last_name => 'Smith', :dob => '1970-01-22', :ssn => '111-11-2000', :phone => '5555555555', :email => 'john@smith.org')
  
   #candidate attributes
   candidate_id = candidate.id 
