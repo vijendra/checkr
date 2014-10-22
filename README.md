@@ -83,7 +83,23 @@ Or install it yourself as:
   ```Ruby
   report = Checkr::Report.find("5878551b3ee1eacae5a2c558")
   report.id #Returns the checkr id of the created report
-  report.status #Returns the check status of the report
+  report.status #Returns the status of the report
+  ```
+**Find individual reports**
+
+  ```Ruby
+  report = Checkr::MotorVehicleReport.find("5878551b3ee1eacae5a2c558")
+  report = Checkr::CountryCriminalSearch.find("5878551b3ee1eacae5a2c558")
+  report = Checkr::NationalCriminalSearch.find("5878551b3ee1eacae5a2c558")
+  report = Checkr::SexOffenderSearch.find("5878551b3ee1eacae5a2c558")
+  report = Checkr::SsnTrace.find("5878551b3ee1eacae5a2c558")
+  report = Checkr::TerroristWatchlistSearch.find("5878551b3ee1eacae5a2c558") 
+  
+  report.status #Returns the status of the report
+  report.records #Returns array of ReportRecord objects, if report has records
+  report.records.first.charges #Returns array of ReportCharge objects, if report has charges  
+  report.accidents #In case of motor vehicle report
+  report.voilations #In case of motor vehicle report
   ```
 ## Contributing
 

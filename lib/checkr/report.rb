@@ -1,36 +1,35 @@
 # -*- encoding: utf-8 -*-
-require 'httparty'
-require 'ostruct'
 module Checkr
-  class Report < OpenStruct
-   include HTTParty
-   base_uri "https://api.checkr.io/v1"
- 
-   def self.create(params={})
+  class Report < Checkr::Base
+    def self.create(params={})
       if valid?(params)
-        response = self.post("/reports", :body => params, :basic_auth => Checkr.auth )
+        response = self.post("/#{self.to_s.tablelize}", :body => params, :basic_auth => Checkr.auth )
         handle_response(response)
       end  
     end
    
     def self.find(id)
-      response = self.get("/reports/#{id}", :basic_auth => Checkr.auth )
+      response = self.get("/#{self.to_s.tablelize}/#{id}", :basic_auth => Checkr.auth )
       handle_response(response)
+    end
+    
+    def self.construct(params)
+      records = params["records"]
+ 	    report = self.new(params.except_key('records'))
+ 	    report.records = []
+ 	    unless records.nil? || records.empty?
+ 	      records.each do |record_attributes|
+ 	        report.records << Checkr::ReportRecord.construct(record_attributes)
+ 	      end
+ 	    end
+ 	      
+ 	    return report 
     end
     
     protected
  
     def self.valid?(params)
       return true #TODO implement validation
-    end
-    
-    def self.handle_response(response)
-      case response.code.to_i
- 	    when 200...300 then Checkr::Report.new(response.parsed_response)
-      when 401 then raise Checkr::AuthenticationError, "#{response.body} Verify your api token." 
- 	    else
- 	      raise Checkr::UnexpectedError, response.body
- 	    end
     end
   end
 end
