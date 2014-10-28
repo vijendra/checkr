@@ -13,7 +13,7 @@ class Object
       public_send(*a, &b) if respond_to?(a.first)
     end
   end
-end  
+end
 
 class String
   def underscored_class_name
@@ -23,12 +23,12 @@ class String
     tr("-", "_").
     downcase
   end
-  
+
   def pluralize
     #TODO this is wrong. But works for now
     "#{self}s"
   end
-  
+
   def tablelize
     self.underscored_class_name.pluralize
   end

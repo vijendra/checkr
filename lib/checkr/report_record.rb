@@ -10,8 +10,8 @@ module Checkr
  	        record.charges << Checkr::ReportCharge.construct(record_attributes)
  	      end
  	    end
- 	      
- 	    return record 
+
+ 	    return record
     end
   end
 end

@@ -5,14 +5,14 @@ module Checkr
       if valid?(params)
         response = self.post("/#{self.to_s.tablelize}", :body => params, :basic_auth => Checkr.auth )
         handle_response(response)
-      end  
+      end
     end
-   
+
     def self.find(id)
       response = self.get("/#{self.to_s.tablelize}/#{id}", :basic_auth => Checkr.auth )
       handle_response(response)
     end
-    
+
     def self.construct(params)
       records = params["records"]
  	    report = self.new(params.except_key('records'))
@@ -22,12 +22,12 @@ module Checkr
  	        report.records << Checkr::ReportRecord.construct(record_attributes)
  	      end
  	    end
- 	      
- 	    return report 
+
+ 	    return report
     end
-    
+
     protected
- 
+
     def self.valid?(params)
       return true #TODO implement validation
     end

@@ -27,36 +27,36 @@ Or install it yourself as:
     c.api_key   = "83ebeabdec09f6670863766f792ead24d61fe3f9" #Test token from checkr api document
   end
   ```
-  
+
 **Create subaccount**
 
   ```Ruby
   subaccount = Checkr::Subaccount.create(:name => 'Checkr', :entity_name => 'My Company', :tax_id => 'XXXXX', :representative_title => 'CEO', :representative_name => 'John Smith', :representative_email => 'john.smith@company.org', :phone => '3101111111',
-:incorporation_date => '2010-02-02', :incorporation_type => 'llc', :incorporation_state => 'DE', 'address[street]' => '3230 3rd street', 'address[city]' => 'San Francisco', 
+:incorporation_date => '2010-02-02', :incorporation_type => 'llc', :incorporation_state => 'DE', 'address[street]' => '3230 3rd street', 'address[city]' => 'San Francisco',
  'address[state]' => 'CA', 'address[zipcode]'=> '94110')
- 
+
   #Subaccount attributes
-  subaccount_id = subaccount.id 
+  subaccount_id = subaccount.id
   ```
 
 **Create candidate for subaccount**
 
   ```Ruby
   candidate = Checkr::Candidate.create(:subaccount_id => '8168372aac5a952b90eb9acb', :first_name => 'John', :last_name => 'Smith', :dob => '1970-01-22', :ssn => '111-11-2000', :phone => '5555555555', :email => 'john@smith.org')
- 
+
   #candidate attributes
-  candidate_id = candidate.id 
+  candidate_id = candidate.id
   ```
 
 **Create candidate**
 
   ```Ruby
   candidate = Checkr::Candidate.create(:first_name => 'John', :last_name => 'Smith', :dob => '1970-01-22', :ssn => '111-11-2000', :phone => '5555555555', :email => 'john@smith.org')
- 
+
   #candidate attributes
-  candidate_id = candidate.id 
-  ```    
- 
+  candidate_id = candidate.id
+  ```
+
 **Find candidate**
 
   ```Ruby
@@ -93,11 +93,11 @@ Or install it yourself as:
   report = Checkr::NationalCriminalSearch.find("5878551b3ee1eacae5a2c558")
   report = Checkr::SexOffenderSearch.find("5878551b3ee1eacae5a2c558")
   report = Checkr::SsnTrace.find("5878551b3ee1eacae5a2c558")
-  report = Checkr::TerroristWatchlistSearch.find("5878551b3ee1eacae5a2c558") 
-  
+  report = Checkr::TerroristWatchlistSearch.find("5878551b3ee1eacae5a2c558")
+
   report.status #Returns the status of the report
   report.records #Returns array of ReportRecord objects, if report has records
-  report.records.first.charges #Returns array of ReportCharge objects, if report has charges  
+  report.records.first.charges #Returns array of ReportCharge objects, if report has charges
   report.accidents #In case of motor vehicle report
   report.voilations #In case of motor vehicle report
   ```
