@@ -1,7 +1,7 @@
 module ExtendCore
   def extend_if_nonexistant *methods
     methods.each do |method_name|
-      if !String.method_defined? method_name
+      if !self.method_defined? method_name
         alias_method method_name, "checkr__#{method_name}".to_sym
       end
     end
