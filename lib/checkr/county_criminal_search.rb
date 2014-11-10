@@ -1,5 +1,5 @@
 module Checkr
-  class CountryCriminalSearch < Checkr::Report
+  class CountyCriminalSearch < Checkr::Report
     
   end
 end

@@ -7,7 +7,7 @@ module Checkr
  	    record.charges = []
  	    unless charges.nil? || charges.empty?
  	      charges.each do |charge_attributes|
- 	        record.charges << Checkr::ReportCharge.construct(record_attributes)
+ 	        record.charges << Checkr::ReportCharge.construct(charge_attributes)
  	      end
  	    end
 
