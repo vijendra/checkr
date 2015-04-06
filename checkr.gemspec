@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'checkr'
 
 Gem::Specification.new do |spec|
-  spec.name          = "checkr"
+  spec.name          = "checkr-rb"
   spec.version       = Checkr::VERSION
   spec.authors       = ["Vijendra Rao"]
   spec.email         = ["vijendrakarkala@gmail.com"]

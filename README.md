@@ -7,7 +7,7 @@ Ruby wrapper for checkr.io API (https://checkr.io/docs)
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'checkr'
+gem 'checkr-rb'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install checkr
+    $ gem install checkr-rb
 
 ## Usage
 
