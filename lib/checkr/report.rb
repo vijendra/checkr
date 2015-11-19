@@ -13,6 +13,11 @@ module Checkr
       handle_response(response)
     end
 
+    def self.update(id, params={})
+      response = self.post("/#{self.to_s.tablelize}/#{id}", :body => params, :basic_auth => Checkr.auth )
+      handle_response(response)
+    end
+
     def self.construct(params)
       records = params["records"]
  	    report = self.new(params.except_key('records'))

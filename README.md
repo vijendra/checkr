@@ -85,6 +85,15 @@ Or install it yourself as:
   report.id #Returns the checkr id of the created report
   report.status #Returns the status of the report
   ```
+
+**Update report**
+
+  ```Ruby
+  report = Checkr::Report.update("5878551b3ee1eacae5a2c558", :package => 'driver_pro')
+  report.id #Returns the checkr id of the updated report
+  report.package #Returns the updated package of the report
+  ```
+
 **Find individual reports**
 
   ```Ruby
