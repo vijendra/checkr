@@ -36,4 +36,16 @@ describe Checkr::Report do
     end
   end
 
+  describe '.update' do
+    let(:report) { Checkr::Report.update("5878551b3ee1eacae5a2c558", :package => 'driver_pro')}
+
+    it "should return report object" do
+      report.must_be_instance_of(Checkr::Report)
+    end
+
+    it "returns report object with updated parameters" do
+      report.id.must_equal("5878551b3ee1eacae5a2c558")
+      report.package.must_equal("driver_pro")
+    end
+  end
 end

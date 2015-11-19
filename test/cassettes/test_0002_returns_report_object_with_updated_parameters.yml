@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://83ebeabdec09f6670863766f792ead24d61fe3f9:@api.checkr.io/v1/reports/5878551b3ee1eacae5a2c558
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 14 Oct 2014 07:16:40 GMT
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '728'
+      X-Content-Type-Options:
+      - nosniff
+      Set-Cookie:
+      - checkr.production=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiRTlhODMzOGUwZjYzOGRhZDU2Mzg4%0AZjg1NWU5ZjJiNzFlN2Q5MmIzMWRlZTAyNTdhYWY4NjRmM2EzN2E5YWYzN2UG%0AOwBGSSIJY3NyZgY7AEZJIiVhM2UzNDAyYzhlMDM0NjcyYTcwY2NmZWE5ZWY4%0AMWRjZAY7AEZJIg10cmFja2luZwY7AEZ7B0kiFEhUVFBfVVNFUl9BR0VOVAY7%0AAFRJIi1kYTM5YTNlZTVlNmI0YjBkMzI1NWJmZWY5NTYwMTg5MGFmZDgwNzA5%0ABjsARkkiGUhUVFBfQUNDRVBUX0xBTkdVQUdFBjsAVEkiLWRhMzlhM2VlNWU2%0AYjRiMGQzMjU1YmZlZjk1NjAxODkwYWZkODA3MDkGOwBG%0A--8ef011e68f25fee896ac92ba9ef0574655e532bf;
+        path=/; HttpOnly; secure
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":"5878551b3ee1eacae5a2c558","object":"test_report","uri":"/v1/reports/5878551b3ee1eacae5a2c558","status":"pending","created_at":"2014-10-14T07:10:16Z","completed_at":null,"upgraded_at":null,"turnaround_time":null,"package":"driver_pro","tags":[],"candidate_id":"e44aa283528e6fde7d542194","ssn_trace_id":"543ccc5835396200064a0000","sex_offender_search_id":"543ccc583539620006510000","terrorist_watchlist_search_id":"543ccc583539620006520000","national_criminal_search_id":"543ccc5835396200064f0000","county_criminal_search_ids":["543ccc583539620006530000","543ccc583539620006540000","543ccc593539620006550000","543ccc593539620006560000"],"motor_vehicle_report_id":"543ccc583539620006500000","geo_id":null,"document_ids":[]}'
+    http_version:
+  recorded_at: Tue, 14 Oct 2014 07:16:40 GMT
+recorded_with: VCR 3.0.0
