@@ -1,4 +1,7 @@
-# Checkr
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+# DEPRECATED
+This is no longer supported, please use the [official gem](https://github.com/checkr/checkr-ruby) instead.
 
 Ruby wrapper for checkr.io API (https://checkr.io/docs)
 

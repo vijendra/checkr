@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Vijendra Rao"]
   spec.email         = ["vijendrakarkala@gmail.com"]
   spec.summary       = %q{checkr API Ruby wrapper}
-  spec.description   = %q{checkr.io API wrapper: Automated background screenings and driving records}
+  spec.description   = %q{[DEPRECATED] checkr.io API wrapper: Automated background screenings and driving records}
   spec.homepage      = "https://github.com/vijendra/checkr"
   spec.license       = "MIT"
 
