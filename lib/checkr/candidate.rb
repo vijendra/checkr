@@ -4,6 +4,26 @@ module Checkr
 
     ArgumentError = Class.new RuntimeError
 
+    ###
+    # Implements https://docs.checkr.com/#operation/createCandidate
+    # Accepted keys:
+    #   * first_name (required)
+    #   * middle_name
+    #   * no_middle_name (Default: false)
+    #   * last_name (required)
+    #   * mother_maiden_name
+    #   * email (required)
+    #   * phone
+    #   * zipcode
+    #   * dob
+    #   * ssn
+    #   * driver_license_number
+    #   * driver_license_state
+    #   * previous_driver_license_number
+    #   * previous_driver_license_state
+    #   * copy_requested (Default: false)
+    #   * geo_ids
+    ###
     def self.create(params={})
       if valid?(params)
         uri = "/subaccounts/#{params[:subaccount_id]}" unless params[:subaccount_id].nil?
