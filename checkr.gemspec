@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'checkr'
+require 'checkr/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "checkr-rb"
@@ -19,9 +19,9 @@ Gem::Specification.new do |spec|
   #spec.require_paths = Dir["README.md","Gemfile","Rakefile", "test/*", "lib/**/*"]
   spec.require_paths = %w(lib)
 
-  spec.add_dependency "httparty"
+  spec.add_runtime_dependency "httparty"
 
-  spec.add_development_dependency "bundler", "~> 1.7"
+  spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "webmock"
